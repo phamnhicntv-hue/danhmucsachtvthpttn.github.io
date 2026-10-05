@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thư viện · Tra cứu danh mục sách</title>
+<meta name="description" content="Tìm sách theo 13 mục, tên sách, tác giả, nhà xuất bản, năm xuất bản và số đăng ký cá biệt.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23234ce3'/%3E%3Cpath d='M7 8h7l2 2 2-2h7v17h-7l-2 2-2-2H7z' fill='white'/%3E%3Cpath d='M16 11v13' stroke='%23234ce3' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="category-colors.css"><link rel="stylesheet" href="banner.css"><script defer src="app.js"></script>
+</head>
+<body>
+<header class="topbar"><a href="./" class="brand"><span class="brandmark" aria-hidden="true">▤</span><span class="brand-text"><span class="brand-school">TRƯỜNG THPT THỐT NỐT</span><span class="brand-title">THƯ VIỆN</span></span></a></header>
+<div class="layout">
+<aside class="sidebar"><div class="sidebar-note" role="note" aria-label="Lưu ý khi tìm sách"><span class="note-icon" aria-hidden="true">i</span><p><span class="notice-question">Tìm thấy sách yêu thích?</span> <strong>Ghi lại số đăng ký</strong> để mượn sách tại thư viện!</p></div><div class="nav-label">KHÁM PHÁ THEO MỤC</div><nav id="categories" aria-label="Danh mục sách"></nav></aside>
+<main>
+<div class="intro"><div><div class="eyebrow">Mỗi cuốn sách, <span class="discovery-accent">một khám phá</span></div><h1>Tìm cuốn sách bạn cần.</h1><p>Tra cứu theo tên sách, tác giả hoặc số đăng ký cá biệt.</p></div><div class="library-gallery" aria-label="Hình ảnh thư viện trường"><figure class="library-photo"><img src="library.jpg" width="1824" height="1368" alt="Góc thư viện Trường THPT Thốt Nốt với bảng giới thiệu sách, bàn đọc và cây xanh"><figcaption>Một góc thư viện trường</figcaption></figure><figure class="library-photo"><img src="library-reading.jpg" width="1824" height="1368" alt="Học sinh và giáo viên tham gia hoạt động đọc sách trong thư viện Trường THPT Thốt Nốt"><figcaption>Cùng đọc sách tại thư viện</figcaption></figure></div></div>
+<form id="search-form" class="search-box" role="search"><label class="sr-only" for="query">Tìm tên sách, tác giả hoặc số đăng ký</label><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="query" type="search" placeholder="Tên sách, tác giả, số đăng ký…" autocomplete="off"><button class="primary" type="submit">Tìm sách</button></form>
+<div class="search-hint">Có thể gõ không dấu, ví dụ: <button id="example" type="button">“tin hoc”</button></div>
+<section class="filter-panel" aria-label="Bộ lọc sách"><label>Tác giả<select id="author"><option value="">Tất cả tác giả</option></select></label><label>Nhà xuất bản<select id="publisher"><option value="">Tất cả nhà xuất bản</option></select></label><label>Năm xuất bản<select id="year"><option value="">Tất cả các năm</option></select></label><button id="reset" class="reset" type="button">Xóa bộ lọc</button></section>
+<section aria-labelledby="result-title"><div class="results-head"><div><h2 id="result-title">Tất cả danh mục</h2><p id="summary" role="status" aria-live="polite">Đang tải danh mục…</p></div><label class="sort-label">Sắp xếp<select id="sort"><option value="source">Theo danh mục gốc</option><option value="az">Tên sách A–Z</option><option value="new">Năm mới nhất</option></select></label></div>
+<div class="table-head" aria-hidden="true"><span>TÊN SÁCH / TÁC GIẢ</span><span>XUẤT BẢN</span><span>TRONG DANH MỤC</span></div><div id="results" aria-busy="true"><div class="empty">Đang tải danh mục sách…</div></div><nav id="pagination" class="pagination" aria-label="Trang kết quả"></nav></section>
+
+</main></div>
+<footer class="site-footer"><p>Địa chỉ: KV Thới An 1, Thốt Nốt, TP Cần Thơ</p></footer>
+<dialog id="detail"><div class="dialog-top"><span>THÔNG TIN SÁCH</span><button id="close-detail" aria-label="Đóng chi tiết">✕</button></div><div id="detail-content"></div><button id="close-bottom" class="primary">Đóng chi tiết</button></dialog>
+</body></html>

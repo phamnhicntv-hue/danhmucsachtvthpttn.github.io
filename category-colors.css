@@ -1,0 +1,28 @@
+/* Shared category colors across navigation, book icons, and category labels. */
+[data-category]{--cat-color:#234ce3;--cat-bg:#edf2ff}
+[data-category="0"]{--cat-color:#ac245d;--cat-bg:#fff0f6}
+[data-category="1"]{--cat-color:#985000;--cat-bg:#fff4df}
+[data-category="2"]{--cat-color:#244ccb;--cat-bg:#edf2ff}
+[data-category="3"]{--cat-color:#087383;--cat-bg:#e7f8fb}
+[data-category="4"]{--cat-color:#6832bd;--cat-bg:#f3edff}
+[data-category="5"]{--cat-color:#075aab;--cat-bg:#eaf4ff}
+[data-category="6"]{--cat-color:#087563;--cat-bg:#e6f8f2}
+[data-category="7"]{--cat-color:#37731f;--cat-bg:#eff8e8}
+[data-category="8"]{--cat-color:#494e9d;--cat-bg:#efeffc}
+[data-category="9"]{--cat-color:#775316;--cat-bg:#fff5de}
+[data-category="10"]{--cat-color:#b13528;--cat-bg:#fff0eb}
+[data-category="11"]{--cat-color:#176477;--cat-bg:#eaf6fa}
+[data-category="12"]{--cat-color:#8c329c;--cat-bg:#faedfd}
+.cat{background:var(--cat-bg);color:var(--cat-color);border:1px solid transparent;border-left:3px solid var(--cat-color);font-weight:600}
+.cat .cat-symbol,.cat .cat-number{color:var(--cat-color)}
+.cat:hover{background:var(--cat-bg);border-color:var(--cat-color)}
+.cat.active{background:var(--cat-color);color:#fff;border-color:var(--cat-color);box-shadow:0 3px 9px #20335218}
+.cat.active .cat-symbol,.cat.active .cat-number{color:#fff}
+.book-icon{color:var(--cat-color);background:var(--cat-bg);border-left-color:var(--cat-color)}
+.chip{color:var(--cat-color);background:var(--cat-bg);font-weight:600}
+.intro{grid-template-columns:minmax(0,1fr) minmax(290px,43%)}
+.library-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}
+.library-photo img{aspect-ratio:4/3;object-position:50% 65%;box-shadow:0 4px 12px #17344a0d}
+.library-photo figcaption{text-align:center;color:#31516f;font-size:.875rem;font-weight:600;line-height:1.6;margin-top:9px}
+@media(max-width:1100px) and (min-width:761px){.intro{grid-template-columns:minmax(0,1fr)}.library-gallery{max-width:460px}.library-photo img{max-height:140px;aspect-ratio:16/10}}
+@media(max-width:760px){.intro{grid-template-columns:minmax(0,1fr)}.library-gallery{gap:10px}.library-photo img{max-height:150px}.cat{border-left-width:3px}}

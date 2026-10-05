@@ -1,0 +1,34 @@
+.topbar{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:clamp(140px,13vw,200px);
+  background-color:#edf5fc;
+  background-image:linear-gradient(90deg,#edf5fc55 0%,#edf5fc18 65%,#edf5fc08 100%),url("library-banner.png");
+  background-size:100% 100%,cover;
+  background-repeat:no-repeat;
+  background-position:center,center 70%;
+  border-bottom:1px solid #cbdcee;
+  box-shadow:0 3px 16px #2c52700a;
+}
+.topbar::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-conic-gradient(from 210deg at 68% -20%,transparent 0deg 9deg,#fff8df70 9deg 13deg,transparent 13deg 22deg);opacity:.45}
+.brandmark{background:#244b87;box-shadow:0 3px 12px #244b8718}
+.brand-text{text-shadow:0 1px 6px #fff,0 0 18px #ffffffcc}
+.brand-school{color:#203e64}
+.brand-title{color:#315c88}
+@font-face{font-family:"Library Calligraphy";src:url("fonts/dancing-script-600.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
+.eyebrow{font-family:"Library Calligraphy","Segoe Script",cursive;font-weight:600;font-size:2rem;letter-spacing:0;line-height:1.5;color:#087983}
+.sidebar-note{display:block;margin:0 0 24px;padding:18px 16px;background:#fff3cc;border:1px solid #ebd28a;border-left:5px solid #daa323;border-radius:10px;box-shadow:0 4px 14px #7954170d;color:#584320;font-size:1rem;line-height:1.65}
+.sidebar-note .note-icon{background:#e6ad2d;color:#302407;width:28px;height:28px;font-size:1rem}
+.sidebar-note p{margin:10px 0 0}
+.notice-question{display:block;font-weight:700;color:#3e321c;margin-bottom:8px;line-height:1.5}
+.sidebar-note strong{color:#8b410b;font-weight:700}
+.site-footer{width:100%;min-height:96px;margin:0;padding:28px 20px;border-top:1px solid #cddde7;background:#eaf2f6;color:#34536b;text-align:center;font-size:1rem;line-height:1.7}
+.site-footer p{margin:0;font-weight:500}
+.header-note{color:#36536f;margin-right:0;max-width:260px;line-height:1.6;padding:8px 14px;border-radius:8px;background:#f4f9ffcf}
+@media(max-width:1100px){.header-note{display:none}}
+@media(max-width:760px){
+  .sidebar-note{display:block;margin:0 20px 18px;padding:14px 16px}
+  .eyebrow{font-size:1.75rem;line-height:1.5}
+  .topbar{min-height:140px;background-image:linear-gradient(90deg,#f0f7fdeb 0%,#f0f7fdc4 45%,#f0f7fd60 100%),url("library-banner.png");background-position:center,center 70%}
+}
